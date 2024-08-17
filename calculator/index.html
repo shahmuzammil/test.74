@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Calculator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="calculator">
-    <input type="text" id="display" disabled>
-    <div class="buttons">
-      <button id="clear">C</button>
-      <button id="backspace">⌫</button>
-      <button id="divide">/</button>
-      <button id="multiply">*</button>
-      <button id="subtract">-</button>
-      <button id="add">+</button>
-      <button id="equals">=</button>
-      <button id="zero">0</button>
-      <button id="one">1</button>
-      <button id="two">2</button>
-      <button id="three">3</button>
-      <button id="four">4</button>
-      <button id="five">5</button>
-      <button id="six">6</button>
-      <button id="seven">7</button>
-      <button id="eight">8</button>
-      <button id="nine">9</button>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" readonly>
+        </div>
+        <div class="buttons">
+            <button value="C" onclick="clear()">C</button>
+            <button value="←" onclick="back()">←</button>
+            <button value="%" onclick="solve('%')">%</button>
+            <button value="/" onclick="solve('/')">/</button>
+            <button value="7" onclick="solve('7')">7</button>
+            <button value="8" onclick="solve('8')">8</button>
+            <button value="9" onclick="solve('9')">9</button>
+            <button value="*" onclick="solve('*')">x</button>
+            <button value="4" onclick="solve('4')">4</button>
+            <button value="5" onclick="solve('5')">5</button>
+            <button value="6" onclick="solve('6')">6</button>
+            <button value="-" onclick="solve('-')">-</button>
+            <button value="1" onclick="solve('1')">1</button>
+            <button value="2" onclick="solve('2')">2</button>
+            <button value="3" onclick="solve('3')">3</button>
+            <button value="+" onclick="solve('+')">+</button>
+            <button value="00" onclick="solve('00')">00</button>
+            <button value="0" onclick="solve('0')">0</button>
+            <button value="." onclick="solve('.')">.</button>
+            <button value="=" onclick="result()">=</button>
+        </div>
     </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
